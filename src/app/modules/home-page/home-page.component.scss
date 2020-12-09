@@ -1,0 +1,63 @@
+.div-main{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    width: 1024px;
+
+    .div-top{
+        display: flex;
+        flex-direction: row;
+        
+        .div-logo{
+            padding: 30px 40px;
+            padding-right: 512px;
+            max-height: 68px;
+            max-width: 179px;
+
+        }
+        .div-top-options{
+            padding-top: 30px;
+            
+            
+            
+            .img-options{
+                //padding-left: 10px;
+            
+            }
+        }
+    }
+    .div-middle{
+        display: flex;
+        flex-direction: row;
+        padding: 15px 40px;
+        
+        .tab {
+            overflow: hidden;
+            padding-right: 512px;
+          
+          .tablinks {
+            
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            color: #3C4857;
+            font-family: "Open Sans";
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 41px;
+            
+          }
+        
+          .tab button:hover {
+            background-color: #ddd;
+          }
+        }
+        .div-middle-options
+        {
+            float: right;
+        }
+    }
+
+}
