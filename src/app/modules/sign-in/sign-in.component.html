@@ -1,32 +1,32 @@
 <div>
-    <div class="div-main" >
-        <div class="div-logo">
-            <img class="img-logo" src="../assets/logo.png">
-            <h2 class="text-tag-line">Protect & Manage every password in your business</h2>
+    <div class="sign-in" >
+        <div class="sign-in-logo-section">
+            <img class="logo-section-img" src="../assets/icons/icon_logo.png">
+            <h2 class="logo-section-title">Protect & Manage every password in your business</h2>
         </div>
 
-        <form [formGroup]="form" class="form-sign-in">
-            <h2 class="title-sign-in">SIGN IN TO YOUR ACCOUNT</h2>
+        <form [formGroup]="form" class="sign-in-form">
+            <h2 class="form-title">SIGN IN TO YOUR ACCOUNT</h2>
             <div>
-                <input class="text-box" id="mobile" type="text" formControlName="mobile" placeholder="Mobile Number">
+                <input class="form-text-box" id="mobile" type="text" formControlName="mobile" placeholder="Mobile Number">
                 <span class="error" *ngIf="mobile.touched && mobile.errors?.required">Please enter mobile number</span>
                 <span class="error" *ngIf="mobile.touched && mobile.errors?.minlength">Minimum 10 digits</span>
                 <span class="error" *ngIf="mobile.touched && !mobile.valid">Please enter a valid mobile number</span>
             </div>
             <div>
-                <input class="text-box" id="mpin" type="text" formControlName="mpin"  placeholder="MPin">
+                <input class="form-text-box" id="mpin" type="text" formControlName="mpin"  placeholder="MPin">
                 <span class="error" *ngIf="mpin.touched && mpin.errors?.required">Please enter 4 digits MPin</span>
                 <span class="error" *ngIf="mpin.touched && mpin.errors?.minlength">Please enter a valid MPin</span>
                 <span class="error" *ngIf="mpin.touched && !mpin.valid">Please enter a valid MPin</span>
             </div>
             
-            <label class="text-forgot-your-password">Forgot your password?</label>
+            <label class="form-text-forgot-your-password">Forgot your password?</label>
             
-            <div class="button">
-                <button class="button-background" [disabled]="form.invalid" (click)="loginUser()">SIGN IN</button>
+            <div class="form-sign-in-button">
+                <button class="form-sign-in-button-background" [disabled]="form.invalid" (click)="loginUser()">SIGN IN</button>
             </div>
 
-            <label (click)="moveToSignUP()" class="text-dont-have-a-account">Don’t have a Account? SIGN UP</label>
+            <label (click)="moveToSignUP()" class="form-text-dont-have-a-account">Don’t have a Account? SIGN UP</label>
 
         </form>
     </div>

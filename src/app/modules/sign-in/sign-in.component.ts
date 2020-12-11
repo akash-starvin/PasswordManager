@@ -16,8 +16,8 @@ export class SignInComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      mobile: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(10)]],
-      mpin: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(4)]],    
+      mobile: ['9902282989', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(10)]],
+      mpin: ['1111', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(4)]],    
     });
   }
   loginUser()

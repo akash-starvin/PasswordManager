@@ -1,26 +1,22 @@
 .div-main
 {
     display: flex;
-    flex-wrap: wrap;
     //flex-direction: row ;
+    height: 100%;
     .navigation-menu{
-        width: 15%;
-        max-width: 120px;
-        max-height: 1024px;
-        height: 100%;
         background-color: #2892FF;
-        display: flex;
-        flex-direction: column ;
-    
+        
         .collapse-menu{
             padding: 40px 40px;
         }
     
         .home-menu{
             padding: 40px 40px;
+            border-left: 3px solid #FFA043;
         }
     }
     .div-home-page{
-        background-color:red;
+        flex-grow: 1;
     }
+    
 }

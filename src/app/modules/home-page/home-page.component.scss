@@ -1,53 +1,44 @@
-.div-main{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    width: 1024px;
-
+.home-page{
+    vertical-align: middle;
+    background-color: #F5F7FB;
+    height: 100%;
     .div-top{
         display: flex;
         flex-direction: row;
         
+        justify-content: space-between;
         .div-logo{
             padding: 30px 40px;
-            padding-right: 512px;
-            max-height: 68px;
-            max-width: 179px;
-
+            
         }
         .div-top-options{
+            justify-content: flex-end;
             padding-top: 30px;
-            
-            
-            
-            .img-options{
-                //padding-left: 10px;
-            
-            }
+            padding-right: 10px;
         }
     }
     .div-middle{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         padding: 15px 40px;
         
         .tab {
-            overflow: hidden;
-            padding-right: 512px;
-          
+            //padding-right: 512px;
+            border-bottom: 4px solid #FFA136;
+            width: 3%;
           .tablinks {
             
             border: none;
             outline: none;
             cursor: pointer;
             transition: 0.3s;
-            color: #3C4857;
             font-family: "Open Sans";
             font-size: 30px;
             font-weight: 400;
             letter-spacing: 0;
             line-height: 41px;
-            
+            background-color: #F5F7FB;
           }
         
           .tab button:hover {
@@ -56,8 +47,113 @@
         }
         .div-middle-options
         {
-            float: right;
+            display: flex;
+            flex-direction: row;
+            
+            .searchdiv {
+                display: flex;
+                .input-box-style {
+                height: 100%;
+                width: auto;
+                border: none;
+                border-bottom: 1px solid #2892FF;
+                font-family: "Open Sans";
+                font-size: 18px;
+                letter-spacing: 0;
+                background-color: #F5F7FB;
+                }
+                
+                .input-box-style:focus {
+                    outline: none;
+                    cursor: text;
+                }
+                
+                .input-box-style:hover {
+                    cursor: text;
+                }
+                .searchbutton{
+                    height: 25px;
+                    width: 25px;
+                    border: none;
+                    padding-top: 15px; 
+                    background-color: #F5F7FB;      
+                }
+            }
+            .button-add{
+                padding-left: 20px;
+            }
         }
+        
     }
-
+    .div-bottom{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px 40px;
+        .text-add-sites
+        {
+            text-align: center;
+            color: #3C4857;
+            font-family: "Open Sans";
+            font-size: 26px;
+            letter-spacing: 0;
+            line-height: 36px;
+        }
+        .sector-folder{
+            color: #3C4857;
+  font-family: "Open Sans";
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 33px;
+  border: none;
+  background-color: #F5F7FB;
+        }
+        .site-detail-card
+        {
+            display: flex;
+            background-color: #ffffff;
+            justify-content: space-between;
+            flex-direction: row;
+            transition: 0.3s;
+            //width: 32%;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            
+            .site-logo{
+                .logo{
+                    padding: 12px 20px;
+                }
+                .site-url{
+                    color: #3C4857;
+                    font-family: "Open Sans";
+                    font-size: 16px; 
+                    letter-spacing: 0;
+                    line-height: 22px;
+                    text-align: right;  
+                    padding-left: 150px; 
+                }
+            }
+            .site-text-content{
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                    .site-name{
+                        color: #0E85FF;
+                        font-family: "Open Sans";
+                        font-size: 20px;
+                        font-weight: 600;
+                        letter-spacing: 0;
+                        line-height: 27px;
+                    }
+                    .text-copy-password{
+                        color: #0E85FF;
+                        font-family: "Open Sans";
+                        font-size: 12.6px;
+                        letter-spacing: 0;
+                        line-height: 17px;
+                    }
+            }
+        }
+        
+    }
 }

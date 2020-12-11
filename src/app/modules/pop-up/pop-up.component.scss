@@ -1,0 +1,110 @@
+.main-div
+{
+    box-sizing: border-box; 
+    position: relative;  
+    .img-close{
+        position: absolute;
+        top:-70px;
+        right: -50px;
+    } 
+    .form{
+        // padding: 0px 10px;
+        
+        border-radius: 20px;
+        
+        .add-site-text {
+            color: #3C4857;
+            font-family: "Open Sans";
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 41px;
+            padding: 0px 10px;
+        }
+        .div-label-input{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .label-text{
+            color: #949CA5;
+            font-family: "Open Sans";
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 24px;
+            padding-bottom: 4px;
+        }
+        .text-box{
+            box-sizing: border-box;
+            height: 36px;
+            width: 701px;
+            border: 1px solid #F5F7FB;
+            border-radius: 4px;
+            background-color: #F5F7FB;
+        }
+        .text-box-small
+        {
+            box-sizing: border-box;
+            height: 36px;
+            width: 341px;
+            border: 1px solid #F5F7FB;
+            border-radius: 4px;
+            background-color: #F5F7FB;
+        }
+        .text-box-big
+        {
+            box-sizing: border-box;
+            height: 72px;
+            width: 701px;
+            border: 1px solid #F5F7FB;
+            border-radius: 4px;
+            background-color: #F5F7FB;
+        }
+        .div-middle{
+
+            display: flex;
+            flex-direction: row;
+            flex-grow: 2;
+        }
+        .div-button{
+            display: flex;
+            flex-direction: row;
+            padding: 20px 10px;
+            justify-content: flex-end;
+            
+        .button-border-only{
+            box-sizing: border-box;
+            width: 25%;
+            padding: 10px 0px;
+            height: 46px;
+            border: 1px solid #0E85FF;
+            border-radius: 4px;
+            color: #0E85FF;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 24px;
+            text-align: center;
+            background-color: #ffffff;
+            
+        }
+        .button-filled{
+            width: 25%;
+            padding: 11px 0px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            background-color: #0E85FF;
+            color: #FFFFFF;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 24px;
+            text-align: center;
+            border: none;
+            margin-left: 30px;
+        
+    }}
+}
+}

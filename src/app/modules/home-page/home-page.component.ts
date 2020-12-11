@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { PopUpComponent } from '../pop-up/pop-up.component';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dialog: MatDialog, private userService: UserService){}
+  sitesCollection = []
   ngOnInit(): void {
+    this.loadSitesCollection();
   }
-
+  openAddSitePopUp()
+  {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    this.dialog.open(PopUpComponent, dialogConfig)
+  }
+  loadSitesCollection(){
+    //this.userArray = this.userService.getUsers();
+    this.sitesCollection = this.userService.getSiteCollection();
+  }
+  editSiteDetail(i,item){
+    console.log(i,item);
+    //this.openAddSitePopUp();
+  }
 }

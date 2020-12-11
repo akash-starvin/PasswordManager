@@ -9,6 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NavigationMenuComponent } from './modules/navigation-menu/navigation-menu.component';
 import { HomePageComponent } from './modules/home-page/home-page.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { PopUpComponent } from './modules/pop-up/pop-up.component';
+
 //import { AppRoutingModule, routingComponents } from './app-routing.module';
 @NgModule({
   declarations: [
@@ -16,8 +20,8 @@ import { HomePageComponent } from './modules/home-page/home-page.component';
     SignInComponent,
     SignUpComponent,
     NavigationMenuComponent,
-    HomePageComponent
-
+    HomePageComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -25,8 +29,11 @@ import { HomePageComponent } from './modules/home-page/home-page.component';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
+    NoopAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+  //entryComponents:[SitePopupComponent]
 })
 export class AppModule { }

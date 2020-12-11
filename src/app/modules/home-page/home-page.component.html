@@ -1,11 +1,11 @@
-<div class="div-main">
+<div class="home-page">
     <div class="div-top">
     
-        <img class="div-logo" src="../assets/logo_title.png">
+        <img class="div-logo" src="../assets/icons/icon_logo_with_title.png">
 
         <div class="div-top-options">
-            <img class="img-options" src="../assets/sync.png">
-            <img class="img-options" src="../assets/profile.png">
+            <img class="img-options" src="../assets/icons/icon_sync.png">
+            <img class="img-options" src="../assets/icons/icon_profile.png">
         </div>
     </div>
 
@@ -14,12 +14,34 @@
             <button class="tablinks">Sites</button>
         </div>          
         <div class="div-middle-options">
-            <input type="text" placeholder="Search">
-            <img src="../assets/add_btn.png">
+            <div class="searchdiv">
+                
+                <input type="text" name="search" placeholder="Search" class="input-box-style"  autocomplete="off">
+                <button class="searchbutton" ><img src="../assets/icons/icon_search.png" alt="Search"></button>
+            </div>
+            <img class="button-add" (click)="openAddSitePopUp()" src="../assets/icons/icon_add.png">
         </div>
     </div>
 
     <div class="div-bottom">
-        <p>Please Click on the “+” symbol to add sites</p>    
+
+        <select class="sector-folder">
+            <option value="Social Media">Social Media</option>
+        </select>
+
+        <div class="site-detail-card" *ngFor="let item of sitesCollection; let i = index;" (click) = "editSiteDetail(i,item)">
+            <div class="site-logo">
+                <div>
+                <img class="logo" src="../assets/icons/icon_facebook_logo.png">
+            </div>
+             <div>
+                <label class="site-url">{{item.siteUrl}}</label>
+            </div>
+            </div>
+            <div class="site-text-content">
+                <label class="site-name">{{item.siteName}}</label>
+                <label class="text-copy-password">Copy Password</label>
+            </div>
+        </div>
     </div>
 </div>

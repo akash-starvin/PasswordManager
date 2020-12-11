@@ -1,21 +1,24 @@
-.div-main{
+.sign-in{
     max-width: 839px;
     max-height: 481px;
     border-radius: 15px;
     background: linear-gradient(180deg, #20BBFF 0%, #0E85FF 100%);
-    box-shadow: 0 8px 18px 10px rgba(0,0,0,0.02);
-    display: flex;
     
-    .div-logo{
+    display: flex;
+    flex: wrap;
+    // width: 45%;
+    // height: 40%;
+    
+    .sign-in-logo-section{
         padding: 94px 28px 99px 25px;
         width: 35%;
         border-right: 1px solid rgba(244, 246, 251,0.19);
         
-        .img-logo {
+        .logo-section-img {
             display: block;
             margin: auto;
         }
-        .text-tag-line{
+        .logo-section-title{
             color: #FFFFFF;
             font-family: "Open Sans";
             font-size: 20px;
@@ -25,9 +28,10 @@
             text-align: center;        
         }
     }
-    .form-sign-in{
+    .sign-in-form{
         padding: 50px 75px;
-        .title-sign-in {
+
+        .form-title {
             color: #FFFFFF;
             font-family: "Open Sans";
             font-size: 20px;
@@ -37,7 +41,7 @@
             margin-left: 14px;
             padding-bottom: 20px;
         }
-        .text-box{
+        .form-text-box{
             width: 85%;
             border-radius: 4px ;
             border: 2px solid white;
@@ -50,7 +54,7 @@
             padding: 16px 22px;
             margin-bottom: 16px;
         }
-        .text-forgot-your-password {
+        .form-text-forgot-your-password {
             color: #FFFFFF;
             font-family: "Open Sans";
             font-size: 14px;
@@ -60,10 +64,10 @@
             text-align: right;
             padding-left: 200px;
         }
-        .button {
+        .form-sign-in-button {
         
             padding: 30px 0px 60px 0px;
-            .button-background {
+            .form-sign-in-button-background {
                 border-radius: 4px;
                 background-color: #FFFFFF;
                 color: #0E85FF;
@@ -76,7 +80,7 @@
                 padding: 10px 28px;
             }
         }  
-        .text-dont-have-a-account {
+        .form-text-dont-have-a-account {
             color: #FFFFFF;
             font-family: "Open Sans";
             font-size: 14px;
