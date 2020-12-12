@@ -1,46 +1,47 @@
-<div class="home-page">
-    <div class="div-top">
+<div class="home">
+    <div class="home-header">
     
-        <img class="div-logo" src="../assets/icons/icon_logo_with_title.png">
+        <img class="home-header-logo" src="../assets/icons/icon_logo_with_title.png">
 
-        <div class="div-top-options">
-            <img class="img-options" src="../assets/icons/icon_sync.png">
-            <img class="img-options" src="../assets/icons/icon_profile.png">
+        <div class="home-header-options">
+            <img src="../assets/icons/icon_sync.png">
+            <img src="../assets/icons/icon_profile.png">
         </div>
     </div>
 
-    <div class="div-middle">
-        <div class="tab">
-            <button class="tablinks">Sites</button>
-        </div>          
-        <div class="div-middle-options">
-            <div class="searchdiv">
+    <div class="home-middle">
+        <div class="home-tab">
+            <button class="tab-link">Sites</button>
+        </div> 
+                 
+        <div class="home-middle-options">
+            <div class="option-search">
                 
-                <input type="text" name="search" placeholder="Search" class="input-box-style"  autocomplete="off">
-                <button class="searchbutton" ><img src="../assets/icons/icon_search.png" alt="Search"></button>
+                <input type="text" name="search" placeholder="Search" class="option-search-text-box"  autocomplete="off">
+                <button class="option-search-button" ><img src="../assets/icons/icon_search.png" alt="Search"></button>
             </div>
-            <img class="button-add" (click)="openAddSitePopUp()" src="../assets/icons/icon_add.png">
-        </div>
+            <img class="option-search-add-button" (click)="openAddSitePopUp()" src="../assets/icons/icon_add.png">
+        </div>    
     </div>
-
-    <div class="div-bottom">
-
-        <select class="sector-folder">
+    <div>
+        <select class="home-sector-folder">
             <option value="Social Media">Social Media</option>
         </select>
+    </div>
 
-        <div class="site-detail-card" *ngFor="let item of sitesCollection; let i = index;" (click) = "editSiteDetail(i,item)">
-            <div class="site-logo">
+    <div class="home-content">
+        <div class="home-content-card" *ngFor="let item of sitesCollection; let i = index;" (click) = "editSiteDetail(i,item)">
+            <div class="card-logo">
                 <div>
                 <img class="logo" src="../assets/icons/icon_facebook_logo.png">
             </div>
              <div>
-                <label class="site-url">{{item.siteUrl}}</label>
+                <label class="card-url-text">{{item.siteUrl}}</label>
             </div>
             </div>
-            <div class="site-text-content">
-                <label class="site-name">{{item.siteName}}</label>
-                <label class="text-copy-password">Copy Password</label>
+            <div class="card-text-content">
+                <label class="content-site-name">{{item.siteName}}</label>
+                <label class="content-text-copy-password" (click)="copyPasswordToClipBoard(item.sitePassword)">Copy Password</label>
             </div>
         </div>
     </div>

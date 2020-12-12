@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(private dialog: MatDialog, private userService: UserService){}
   sitesCollection = []
+
   ngOnInit(): void {
     this.loadSitesCollection();
   }
@@ -20,14 +21,21 @@ export class HomePageComponent implements OnInit {
   {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
-    this.dialog.open(PopUpComponent, dialogConfig)
+    this.dialog.open(PopUpComponent, dialogConfig);
   }
   loadSitesCollection(){
-    //this.userArray = this.userService.getUsers();
     this.sitesCollection = this.userService.getSiteCollection();
   }
-  editSiteDetail(i,item){
-    console.log(i,item);
-    //this.openAddSitePopUp();
+
+  editSiteDetail(i, item){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    //dialogConfig.data = item;
+    this.dialog.open(PopUpComponent, dialogConfig)
+  }
+
+  copyPasswordToClipBoard(password: string){
+    console.log("x",password);
+    //this.clipboard.writeText(password);
   }
 }

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 
+
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -11,13 +12,14 @@ import { UserService } from 'src/app/services/user.service';
 export class SignInComponent implements OnInit {
 
   form: FormGroup;
+  
 
   constructor(private formBuilder: FormBuilder, private router:Router, private userService: UserService) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      mobile: ['9902282989', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(10)]],
-      mpin: ['1111', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(4)]],    
+      mobile: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(10)]],
+      mpin: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.minLength(4)]],    
     });
   }
   loginUser()
@@ -38,4 +40,5 @@ export class SignInComponent implements OnInit {
   get mpin() {
     return this.form.get('mpin');
   }
+  
 }

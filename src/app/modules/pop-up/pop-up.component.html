@@ -1,52 +1,52 @@
-<div class="main-div">
-    <img class="img-close" (click)="closePopUP()" src="../assets/icons/icon_close.png">
-    <form [formGroup]="form" class="form">
-        <h1 class="add-site-text">Add site</h1>
+<div class="pop-up">
+    <img class="pop-up-close-button" (click)="closePopUP()" src="../assets/icons/icon_close.png">
+    <form [formGroup]="form" class="pop-up-form">
+        <h1 class="form-title">Add site</h1>
 
-        <div class="div-label-input">
-            <label class="label-text" formControlName="siteUrl">URL</label>
-            <input class="text-box" id="siteUrl" formControlName="siteUrl" type="text">
+        <div class="form-label-input">
+            <label class="form-label-text" formControlName="siteUrl">URL</label>
+            <input class="form-text-box" id="siteUrl" formControlName="siteUrl" type="text">
             <span class="error"  *ngIf="siteUrl?.touched && siteUrl?.errors?.required">Please enter URL</span>
         </div>
 
-        <div class="div-middle">
-            <div class="div-label-input">
-                <label class="label-text">Site Name</label>
-                <input class="text-box-small" id="siteName" formControlName="siteName" type="text">
+        <div class="form-middle">
+            <div class="form-label-input">
+                <label class="form-label-text">Site Name</label>
+                <input class="form-text-box-small" id="siteName" formControlName="siteName" type="text">
                 <span class="error" *ngIf="siteName?.touched && siteName?.errors?.required">Please enter site name</span>
             </div>
-            <div class="div-label-input">
-                <label class="label-text">Sector/Folder</label>
+            <div class="form-label-input">
+                <label class="form-label-text">Sector/Folder</label>
                 <!-- <input class="text-box-small" id="sector" formControlName="sector" type="select"> -->
-                <select class="text-box-small" name="sector" id="sector">
+                <select class="form-text-box-small" name="sector" id="sector">
                     <option value="Social Media">Social Media</option>
                 </select>
                 <!-- <span class="error" *ngIf="sector?.touched && sector?.errors?.required">Please enter sector</span> -->
             </div>
         </div>
         
-        <div class="div-middle">
-            <div class="div-label-input">
-                <label class="label-text">User Name</label>
-                <input class="text-box-small" id="userName" formControlName="userName" type="text">
+        <div class="form-middle">
+            <div class="form-label-input">
+                <label class="form-label-text">User Name</label>
+                <input class="form-text-box-small" id="userName" formControlName="userName" type="text">
                 <span class="error" *ngIf="userName?.touched && userName?.errors?.required">Please enter user name</span>
             </div>
-            <div class="div-label-input">
-                <label class="label-text">Site Password</label>
-                <input class="text-box-small" id="sitePassword" formControlName="sitePassword" type="text">
+            <div class="form-label-input">
+                <label class="form-label-text">Site Password</label>
+                <input class="form-text-box-small" id="sitePassword" formControlName="sitePassword" type="text">
                 <span class="error" *ngIf="sitePassword?.touched && sitePassword?.errors?.required">Please enter site password</span>
             </div>
         </div>
 
-        <div class="div-label-input">
-            <label class="label-text">Notes</label>
-            <input class="text-box-big" id="notes" formControlName="notes" type="text">
+        <div class="form-label-input">
+            <label class="form-label-text">Notes</label>
+            <input class="form-text-box-big" id="notes" formControlName="notes" type="text">
             <span class="error" *ngIf="notes?.touched && notes?.errors?.required">Please enter notes</span>
         </div>
 
-        <div class="div-button">
-            <button class="button-border-only" (click)="resetForm()">Reset</button>
-            <button class="button-filled" (click)="saveSite()" [disabled]="form.invalid">Save</button>
+        <div class="form-button">
+            <button class="form-button-border-only" (click)="resetForm()">Reset</button>
+            <button class="form-button-filled" (click)="saveSite()" [disabled]="form.invalid">Save</button>
         </div>
     </form>
 </div>

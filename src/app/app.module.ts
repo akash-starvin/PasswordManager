@@ -12,8 +12,6 @@ import { HomePageComponent } from './modules/home-page/home-page.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './modules/pop-up/pop-up.component';
-
-//import { AppRoutingModule, routingComponents } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,

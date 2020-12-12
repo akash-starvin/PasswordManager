@@ -7,10 +7,10 @@ export class UserService {
 
   constructor() { }
 
-  // serviceMobile: number;
-  // serviceMpin: number;
-  serviceMobile = 9902282989;
-  serviceMpin = 1111;
+  serviceMobile: number;
+  serviceMpin: number;
+  // serviceMobile = 9902282989;
+  // serviceMpin = 1111;
 
   // sitesCollection: {
   //   siteUrl: string,
@@ -41,7 +41,7 @@ export class UserService {
       "siteName": "Facebook",
       "sector": "0",
       "userName": "user@facebook.com",
-      "sitePassword": "12345",
+      "sitePassword": "54321",
       "notes": "xyz"
     },
     {
@@ -110,5 +110,5 @@ export class UserService {
   {
     this.sitesCollection.push({siteUrl, siteName, sector, userName, sitePassword, notes});
   }
-
+  
 }

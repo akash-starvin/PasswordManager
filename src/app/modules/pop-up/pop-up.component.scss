@@ -1,18 +1,19 @@
-.main-div
+.error{
+    color: red;
+}
+.pop-up
 {
     box-sizing: border-box; 
     position: relative;  
-    .img-close{
+    .pop-up-close-button{
         position: absolute;
         top:-70px;
         right: -50px;
     } 
-    .form{
-        // padding: 0px 10px;
-        
+    .pop-up-form{
         border-radius: 20px;
         
-        .add-site-text {
+        .form-title {
             color: #3C4857;
             font-family: "Open Sans";
             font-size: 30px;
@@ -21,12 +22,12 @@
             line-height: 41px;
             padding: 0px 10px;
         }
-        .div-label-input{
+        .form-label-input{
             display: flex;
             flex-direction: column;
             padding: 10px;
         }
-        .label-text{
+        .form-label-text{
             color: #949CA5;
             font-family: "Open Sans";
             font-size: 18px;
@@ -34,7 +35,7 @@
             line-height: 24px;
             padding-bottom: 4px;
         }
-        .text-box{
+        .form-text-box{
             box-sizing: border-box;
             height: 36px;
             width: 701px;
@@ -42,7 +43,7 @@
             border-radius: 4px;
             background-color: #F5F7FB;
         }
-        .text-box-small
+        .form-text-box-small
         {
             box-sizing: border-box;
             height: 36px;
@@ -51,7 +52,7 @@
             border-radius: 4px;
             background-color: #F5F7FB;
         }
-        .text-box-big
+        .form-text-box-big
         {
             box-sizing: border-box;
             height: 72px;
@@ -60,19 +61,19 @@
             border-radius: 4px;
             background-color: #F5F7FB;
         }
-        .div-middle{
+        .form-middle{
 
             display: flex;
             flex-direction: row;
             flex-grow: 2;
         }
-        .div-button{
+        .form-button{
             display: flex;
             flex-direction: row;
             padding: 20px 10px;
             justify-content: flex-end;
             
-        .button-border-only{
+          .form-button-border-only{
             box-sizing: border-box;
             width: 25%;
             padding: 10px 0px;
@@ -88,8 +89,8 @@
             text-align: center;
             background-color: #ffffff;
             
-        }
-        .button-filled{
+          }
+          .form-button-filled{
             width: 25%;
             padding: 11px 0px;
             box-sizing: border-box;

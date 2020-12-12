@@ -1,34 +1,35 @@
-.home-page{
+.home{
     vertical-align: middle;
     background-color: #F5F7FB;
     height: 100%;
-    .div-top{
+    display: flex;
+    flex-direction: column;
+    
+    .home-header{
         display: flex;
         flex-direction: row;
-        
         justify-content: space-between;
-        .div-logo{
+
+        .home-header-logo{
             padding: 30px 40px;
-            
         }
-        .div-top-options{
+        .home-header-options{
             justify-content: flex-end;
             padding-top: 30px;
             padding-right: 10px;
         }
     }
-    .div-middle{
+    .home-middle{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 15px 40px;
         
-        .tab {
-            //padding-right: 512px;
+        .home-tab {
             border-bottom: 4px solid #FFA136;
             width: 3%;
-          .tablinks {
-            
+
+          .tab-link {
             border: none;
             outline: none;
             cursor: pointer;
@@ -45,14 +46,15 @@
             background-color: #ddd;
           }
         }
-        .div-middle-options
+        .home-middle-options
         {
             display: flex;
             flex-direction: row;
             
-            .searchdiv {
+            .option-search {
                 display: flex;
-                .input-box-style {
+                
+                .option-search-text-box {
                 height: 100%;
                 width: auto;
                 border: none;
@@ -63,7 +65,7 @@
                 background-color: #F5F7FB;
                 }
                 
-                .input-box-style:focus {
+                .option-search-text-box:focus {
                     outline: none;
                     cursor: text;
                 }
@@ -71,7 +73,7 @@
                 .input-box-style:hover {
                     cursor: text;
                 }
-                .searchbutton{
+                .option-search-button{
                     height: 25px;
                     width: 25px;
                     border: none;
@@ -79,18 +81,27 @@
                     background-color: #F5F7FB;      
                 }
             }
-            .button-add{
+            .option-search-add-button{
                 padding-left: 20px;
             }
         }
         
     }
-    .div-bottom{
+    .home-sector-folder{
+        color: #3C4857;
+        font-family: "Open Sans";
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: 33px;
+        border: none;
+        background-color: #F5F7FB;
+        padding: 20px 40px;
+    }
+    .home-content{
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         padding: 20px 40px;
-        .text-add-sites
+        .home-content-add-sites-text
         {
             text-align: center;
             color: #3C4857;
@@ -99,31 +110,21 @@
             letter-spacing: 0;
             line-height: 36px;
         }
-        .sector-folder{
-            color: #3C4857;
-  font-family: "Open Sans";
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 33px;
-  border: none;
-  background-color: #F5F7FB;
-        }
-        .site-detail-card
+        .home-content-card
         {
             display: flex;
             background-color: #ffffff;
             justify-content: space-between;
             flex-direction: row;
             transition: 0.3s;
-            //width: 32%;
             margin-right: 20px;
             margin-bottom: 20px;
             
-            .site-logo{
+            .card-logo{
                 .logo{
                     padding: 12px 20px;
                 }
-                .site-url{
+                .card-url-text{
                     color: #3C4857;
                     font-family: "Open Sans";
                     font-size: 16px; 
@@ -133,11 +134,11 @@
                     padding-left: 150px; 
                 }
             }
-            .site-text-content{
+            .card-text-content{
                 display: flex;
                 flex-direction: column;
                 padding: 10px;
-                    .site-name{
+                    .content-site-name{
                         color: #0E85FF;
                         font-family: "Open Sans";
                         font-size: 20px;
@@ -145,7 +146,7 @@
                         letter-spacing: 0;
                         line-height: 27px;
                     }
-                    .text-copy-password{
+                    .content-text-copy-password{
                         color: #0E85FF;
                         font-family: "Open Sans";
                         font-size: 12.6px;

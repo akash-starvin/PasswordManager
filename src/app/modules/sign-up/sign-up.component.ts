@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -11,7 +15,6 @@ import { UserService } from 'src/app/services/user.service';
 export class SignUpComponent implements OnInit {
 
   form: FormGroup;
-
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) {}
   
   ngOnInit() {
@@ -23,7 +26,6 @@ export class SignUpComponent implements OnInit {
     });
   }
   signUpUser(){
-    console.log("x",this.form.get('mobile').value);
     this.userService.addNewUser(this.form.get('mobile').value, this.form.get('mpin').value);
     this.router.navigate(['signIn']);
   }

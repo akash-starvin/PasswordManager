@@ -1,7 +1,6 @@
-.div-main
+.navigation
 {
     display: flex;
-    //flex-direction: row ;
     height: 100%;
     .navigation-menu{
         background-color: #2892FF;
@@ -15,7 +14,7 @@
             border-left: 3px solid #FFA043;
         }
     }
-    .div-home-page{
+    .home-page-content{
         flex-grow: 1;
     }
     
